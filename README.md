@@ -1,2 +1,2 @@
-sass-devtools
+Sass Devtools
 =============
