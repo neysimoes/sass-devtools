@@ -1,0 +1,57 @@
+//
+// Sass Devtools v.1.0
+// Author: João Paulo - jaoz
+// Repository: https://github.com/jaoz/sass-devtools
+// Documentation: https://jaoz.github.io/sass-devtools
+// -------------------------------------------------------------------------------------------------------------------------
+
+//
+// Variables
+// -------------------------------------------------------------------------------------------------------------------------
+$grey:                            rgb(149, 165, 166);
+$blue:                            rgb(52, 152, 219);
+$yellow:                          rgb(241, 196, 15);
+$green:                           rgb(22, 160, 133);
+$red:                             rgb(231, 76, 60);
+$midnight:                        rgb(52, 73, 94);
+$dark-grey:                       rgb(127, 140, 141);
+$dark-blue:                       rgb(41, 128, 185);
+$dark-yellow:                     rgb(243, 156, 18);
+$dark-green:                      rgb(22, 160, 133);
+$dark-red:                        rgb(192, 57, 43);
+$dark-midnight:                   rgb(44, 62, 80);
+
+//
+// Mixins
+// -------------------------------------------------------------------------------------------------------------------------
+@mixin transition($type-of-transition, $time-of-transition, $type-of-effect) {
+  -webkit-transition: $type-of-transition $time-of-transition $type-of-effect;
+     -moz-transition: $type-of-transition $time-of-transition $type-of-effect;
+          transition: $type-of-transition $time-of-transition $type-of-effect;
+}
+
+@mixin border-radius($size-of-border) {
+  -webkit-border-radius: $size-of-border;
+     -moz-border-radius: $size-of-border;
+          border-radius: $size-of-border;
+}
+
+@mixin scale($size-of-scale) {
+  -webkit-transform: scale($size-of-scale);
+     -moz-transform: scale($size-of-scale);
+          transform: scale($size-of-scale);
+}
+
+//
+// Functions
+// -------------------------------------------------------------------------------------------------------------------------
+@function convertoEM($pixel-value) {
+  @return #{$pixel-value / 16}em;
+}
+
+body {
+  @include transition(all, 3s, ease);
+  @include border-radius(convertoEM(20));
+  @include scale(convertoEM(20));
+  background: $dark-green;
+}
