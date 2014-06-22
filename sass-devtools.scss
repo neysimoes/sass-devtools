@@ -42,6 +42,12 @@ $dark-midnight:                   rgb(44, 62, 80);
           transform: scale($size-of-scale);
 }
 
+@mixin rotate($rotate-value) {
+  -webkit-transform: rotate($rotate-value);
+     -moz-transform: rotate($rotate-value);
+          transform: rotate($rotate-value);
+}
+
 @mixin box-shadow($first-value, $second-value, $third-value, $fourth-value) {
   -webkit-box-shadow: $first-value $second-value $third-value $fourth-value;
      -moz-box-shadow: $first-value $second-value $third-value $fourth-value;
