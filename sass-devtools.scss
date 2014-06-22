@@ -42,16 +42,34 @@ $dark-midnight:                   rgb(44, 62, 80);
           transform: scale($size-of-scale);
 }
 
+@mixin box-shadow($first-value, $second-value, $third-value, $fourth-value) {
+  -webkit-box-shadow: $first-value $second-value $third-value $fourth-value;
+     -moz-box-shadow: $first-value $second-value $third-value $fourth-value;
+          box-shadow: $first-value $second-value $third-value $fourth-value;
+}
+
+@mixin box-shadowRGBA($first-value, $second-value, $third-value, $fourth-value) {
+  -webkit-box-shadow: $first-value $second-value $third-value rgba($fourth-value);
+     -moz-box-shadow: $first-value $second-value $third-value rgba($fourth-value);
+          box-shadow: $first-value $second-value $third-value rgba($fourth-value);  
+}
+
+@mixin opacity($first-value, $second-value) {
+  filter: alpha(opacity=$second-value);
+  -webkit-opacity: $first-value;
+     -moz-opacity: $first-value;
+          opacity: $first-value;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: box-content;
+     -moz-box-sizing: box-content;
+          box-sizing: box-content;
+}
+
 //
 // Functions
 // -------------------------------------------------------------------------------------------------------------------------
 @function convertoEM($pixel-value) {
   @return #{$pixel-value / 16}em;
-}
-
-body {
-  @include transition(all, 3s, ease);
-  @include border-radius(convertoEM(20));
-  @include scale(convertoEM(20));
-  background: $dark-green;
 }
