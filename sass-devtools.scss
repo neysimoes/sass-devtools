@@ -79,3 +79,7 @@ $dark-midnight:                   rgb(44, 62, 80);
 @function convertoEM($pixel-value) {
   @return #{$pixel-value / 16}em;
 }
+
+@function convertoPER($target, $parent: 100) {
+  @return percentage($target / $parent);
+}
