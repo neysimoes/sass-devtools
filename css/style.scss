@@ -19,6 +19,10 @@ $white: #fff;
   @include transition(all, 100ms, ease);
 }
 
+body {
+  height: 1500px;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
