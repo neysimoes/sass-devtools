@@ -260,6 +260,7 @@ header {
     color: $pink;
     text-decoration: none;
     margin-top: convertoEM(30);
+    border-bottom: 1px solid #eee;
   }
 
   h2 {
@@ -274,7 +275,7 @@ header {
     margin-top: convertoEM(10);
     display: inline-block;
     width: 100%;
-    @include border-radius(convertoEM(5));
+    @include border-radius(convertoEM(10));
   }
 
   .auto {
@@ -283,7 +284,7 @@ header {
     padding: convertoEM(5);
     display: inline-block;
     width: auto;
-    @include border-radius(convertoEM(5));
+    @include border-radius(convertoEM(10));
   }
 
   p {
@@ -295,6 +296,26 @@ header {
     li {
       list-style: none;
     }
+  }
+}
+
+table {
+  position: relative;
+  border: 1px solid #eee;
+  margin-top: convertoEM(30);
+  width: 102%;
+
+  tr {
+  	background: #ccc;
+  	position: relative;
+  	left: 0;
+
+
+  	td {
+  	  background: #eee;
+  	  border: 1px solid #ccc;
+  	  padding: convertoEM(10);
+  	}
   }
 }
 
@@ -340,6 +361,10 @@ footer {
         display: block;
       }
     }
+  }
+
+  table {
+  	width: 100%;
   }
 }
 

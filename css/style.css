@@ -226,6 +226,7 @@ header .navigation ul li:hover a {
   color: #cc6699;
   text-decoration: none;
   margin-top: 1.875em;
+  border-bottom: 1px solid #eee;
 }
 .content-sass h2 {
   color: #cc6699;
@@ -238,9 +239,9 @@ header .navigation ul li:hover a {
   margin-top: 0.625em;
   display: inline-block;
   width: 100%;
-  -webkit-border-radius: 0.3125em;
-  -moz-border-radius: 0.3125em;
-  border-radius: 0.3125em;
+  -webkit-border-radius: 0.625em;
+  -moz-border-radius: 0.625em;
+  border-radius: 0.625em;
 }
 .content-sass .auto {
   background: #eee;
@@ -248,9 +249,9 @@ header .navigation ul li:hover a {
   padding: 0.3125em;
   display: inline-block;
   width: auto;
-  -webkit-border-radius: 0.3125em;
-  -moz-border-radius: 0.3125em;
-  border-radius: 0.3125em;
+  -webkit-border-radius: 0.625em;
+  -moz-border-radius: 0.625em;
+  border-radius: 0.625em;
 }
 .content-sass p {
   margin-top: 0.3125em;
@@ -258,6 +259,23 @@ header .navigation ul li:hover a {
 }
 .content-sass ul li {
   list-style: none;
+}
+
+table {
+  position: relative;
+  border: 1px solid #eee;
+  margin-top: 1.875em;
+  width: 102%;
+}
+table tr {
+  background: #ccc;
+  position: relative;
+  left: 0;
+}
+table tr td {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 0.625em;
 }
 
 footer {
@@ -292,6 +310,10 @@ footer .logo {
 
   header .navigation ul {
     display: block;
+  }
+
+  table {
+    width: 100%;
   }
 }
 @media screen and (max-width: 43.75em) {
