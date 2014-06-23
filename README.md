@@ -12,3 +12,13 @@ Sass Devtools has:
 - Great Syntax
 - Easy to understand
 - Sass Devtools is available in many Package Managers like (Bower, Node)
+
+
+How to install?
+===============
+
+```
+
+$ bower install sass-devtools
+
+```
