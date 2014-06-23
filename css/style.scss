@@ -19,10 +19,6 @@ $white: #fff;
   @include transition(all, 100ms, ease);
 }
 
-body {
-  height: 1200px;
-}
-
 ::selection {
   background: $pink;
   color: $white;
@@ -34,7 +30,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
