@@ -17,8 +17,10 @@ Sass Devtools has:
 How to install?
 ===============
 
-```
+``` html
 
-$ bower install sass-devtools
+<html>
+<div class="teste"></div>
+</html>
 
 ```
