@@ -20,7 +20,7 @@ $white: #fff;
 }
 
 body {
-  height: 1500px;
+  height: 1200px;
 }
 
 .container {
@@ -33,89 +33,223 @@ header {
   width: 100%;
   height: auto;
   color: $white;
-  padding: convertoEM(20) 0 convertoEM(50) 0;
+  padding: convertoEM(20) convertoEM(0) convertoEM(50) convertoEM(0);
 
   h1 {
-  	margin-top: convertoEM(10);
-  	display: inline-block;
-  	font-size: convertoEM(60);
+    margin-top: convertoEM(10);
+    display: inline-block;
+    font-size: convertoEM(60);
   }
 
   h2 {
-  	font-size: convertoEM(10);
+    font-size: convertoEM(10);
   }
 
   ul {
-  	margin-top: convertoEM(40);
-  	
-  	li {
-  	  list-style: none;
-  	  display: inline-block;
-  	  background: $white;
-  	  padding: convertoEM(10);
-  	  @include opacity(.9, 90);
-  	  @include border-radius(convertoEM(2));
+    margin: convertoEM(40) 0;
+    
+    li {
+      list-style: none;
+      display: inline-block;
+      background: $white;
+      padding: convertoEM(10);
+      @include opacity(.9, 90);
+      @include border-radius(convertoEM(2));
 
-  	  a {
-  	  	color: $pink;
-  	  	text-decoration: none;
-  	  	padding-left: convertoEM(10);
-  	  }
+      a {
+        color: $pink;
+        text-decoration: none;
+        padding-left: convertoEM(10);
+      }
 
-  	  i {
-  	    font-size: convertoEM(18);
-  	    color: $pink;
-  	    padding-top: convertoEM(1);
-  	  }
-  	}
+      i {
+        font-size: convertoEM(18);
+        color: $pink;
+        padding-top: convertoEM(1);
+      }
+    }
 
-  	li:hover {
-  	  background: $dark-pink;
-  	}
+    li:hover {
+      background: $dark-pink;
+    }
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background: #333;
+    width: 100%;
+    height: convertoEM(80);
+    display: none;
+    -webkit-animation: nav 300ms;
+       -moz-animation: nav 300ms;
+            animation: nav 300ms;
+
+    .content-navigation {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+
+    button {
+      display: none;
+    }
+
+    .logo {
+      background: url("../images/logo.png") no-repeat;
+      width: convertoEM(80);
+      height: convertoEM(80);
+      margin-top: convertoEM(10);
+    }
+
+    ul {
+      float: right;
+      display: block;
+      clear: both;
+      margin-top: convertoEM(-66);
+
+      li {
+        display: inline-block;
+        background: transparent;
+
+        a {
+          color: $white;
+        }
+
+        a:hover {
+          background: transparent;
+        }
+      }
+    }
   }
 }
 
-@media screen and (max-width: 990px) {
+@-webkit-keyframes nav {
+    0% {
+      margin-top: convertoEM(-100);
+    }
+
+    100% {
+      margin-top: 0;
+    }
+  }
+
+@keyframes nav {
+  0% {
+    margin-top: convertoEM(-100);
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: convertoEM(990)) {
   .container {
-  	max-width: 90%;
-  	margin: 0 auto;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  header {
+    .navigation {
+      ul {
+        display: block;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: convertoEM(700)) {
   header {
-    padding: convertoEM(20) 0 convertoEM(20) 0;
 
-  	h1 {
-  	  font-size: 8vw;
-  	  text-align: center;
-  	  width: 100%;
-  	}
+    h1 {
+      font-size: 8vw;
+      text-align: center;
+      width: 100%;
+    }
 
-  	h3 {
-  	  text-align: center;
-  	  width: 100%;
-  	  margin-top: convertoEM(20);
-  	}
+    h3 {
+      text-align: center;
+      width: 100%;
+      margin-top: convertoEM(20);
+    }
 
-  	ul {
-  	  width: 100%;
-  	  margin-left: convertoEM(-10);
+    ul {
+      width: 100%;
+      margin-left: convertoEM(-10);
 
-  	  li {
-  	  	width: 100%;
-  	  	margin-bottom: convertoEM(2);
+      li {
+        width: 100%;
+        margin-bottom: convertoEM(2);
 
-  	  	a {
-  	  	  width: 100%;
-  	  	  text-align: center;
+        a {
+          width: 100%;
+          text-align: center;
 
-  	  	  i {
-  	  	  width: 100%;
-  	  	  text-align: center;
-  	  	}
-  	  	}
-  	  }
-  	}
+          i {
+          width: 100%;
+          text-align: center;
+        }
+        }
+      }
+    }
+
+    .navigation {
+      width: 100%;
+    
+      .logo {
+        margin: 0 auto;
+        margin-top: convertoEM(10);
+      }
+
+      .content-navigation {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      button {
+        display: block;
+        float: right;
+        display: block;
+        margin: convertoEM(-70) convertoEM(10) 0 0;
+        background: transparent;
+        border: none;
+        
+        i {
+          font-size: convertoEM(30);
+          color: $white;
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: convertoEM(80);
+        left: 0;
+        background: #222;
+        margin: 0;
+        width: 100%;
+        display: none;
+
+        li { 
+          padding: convertoEM(20);
+          margin-left: convertoEM(-15);
+
+          a {
+            color: $pink;
+          }
+
+          a:after {
+            font-family: "FontAwesome";
+            content: "\f061";
+            float: right;
+            margin-right: convertoEM(20);
+          }
+        }
+
+        li:hover {
+          background: #111;
+        }
+      }
+    }
   }
 }
