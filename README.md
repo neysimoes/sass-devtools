@@ -1,12 +1,10 @@
 Sass Devtools v.1.0
 ===================
 
-Did you ever caught yourself thinking... Why doesn't exist any tool for SASS to help me?
-Well now you have one :)
-
 Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.
 
-Sass Devtools has:
+What is the difference of Sass Devtools?
+========================================
 
 - Great Code
 - Great Syntax
@@ -17,10 +15,3 @@ Sass Devtools has:
 How to install?
 ===============
 
-``` html
-
-<html>
-<div class="teste"></div>
-</html>
-
-```
