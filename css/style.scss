@@ -23,6 +23,16 @@ body {
   height: 1200px;
 }
 
+::selection {
+  background: $pink;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $pink;
+  color: $white;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -81,6 +91,85 @@ header {
     background: #333;
     width: 100%;
     height: convertoEM(80);
+    margin: 0;
+    display: none;
+    -webkit-animation: nav 300ms;
+       -moz-animation: nav 300ms;
+            animation: nav 300ms;
+
+    .content-navigation {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+
+    button {
+      display: none;
+    }
+
+    .logo {
+      background: url("../images/logo.png") no-repeat;
+      width: convertoEM(80);
+      height: convertoEM(80);
+      margin-top: convertoEM(10);
+    }
+
+    ul {
+      float: right;
+      display: block;
+      clear: both;
+      margin-top: convertoEM(-66);
+
+      li {
+        display: inline-block;
+        background: transparent;
+
+        a {
+          color: $white;
+          text-align: center;
+          padding-left: 0;
+        }
+
+        a:hover {
+          background: transparent;
+          text-align: center;
+          color: $dark-pink;
+        }
+      }
+    }
+  	
+  	li {
+  	  list-style: none;
+  	  display: inline-block;
+  	  background: $white;
+  	  padding: convertoEM(10);
+  	  @include opacity(.9, 90);
+  	  @include border-radius(convertoEM(2));
+
+  	  a {
+  	  	color: $pink;
+  	  	text-decoration: none;
+  	  	padding-left: convertoEM(10);
+  	  }
+
+  	  i {
+  	    font-size: convertoEM(18);
+  	    color: $pink;
+  	    padding-top: convertoEM(1);
+  	  }
+  	}
+
+  	li:hover {
+  	  background: $dark-pink;
+  	}
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background: #333;
+    width: 100%;
+    height: convertoEM(80);
     display: none;
     -webkit-animation: nav 300ms;
        -moz-animation: nav 300ms;
@@ -115,9 +204,13 @@ header {
         a {
           color: $white;
         }
+      }
 
-        a:hover {
-          background: transparent;
+      li:hover {
+        background: $pink;
+
+        a {
+          color: $white;
         }
       }
     }
@@ -144,6 +237,93 @@ header {
   }
 }
 
+@-webkit-keyframes nav {
+    0% {
+      margin-top: convertoEM(-100);
+    }
+
+    100% {
+      margin-top: 0;
+    }
+  }
+
+@keyframes nav {
+  0% {
+    margin-top: convertoEM(-100);
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+.content-sass {
+  margin-top: convertoEM(130);
+
+  h1 {
+    color: $pink;
+    text-decoration: none;
+    margin-top: convertoEM(30);
+  }
+
+  h2 {
+    color: $pink;
+    text-decoration: none;
+  }
+
+  span {
+    background: #eee;
+    border: convertoEM(1) solid #ccc;
+    padding: convertoEM(10);
+    margin-top: convertoEM(10);
+    display: inline-block;
+    width: 100%;
+    @include border-radius(convertoEM(5));
+  }
+
+  .auto {
+    background: #eee;
+    border: convertoEM(1) solid #ccc;
+    padding: convertoEM(5);
+    display: inline-block;
+    width: auto;
+    @include border-radius(convertoEM(5));
+  }
+
+  p {
+    margin-top: convertoEM(5);
+    display: inline-block;
+  }
+
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background: #eee;
+  margin-top: convertoEM(40);
+  display: inline-block;
+
+  p {
+    color: #999;
+    margin-top: convertoEM(45);
+  }
+
+  .logo {
+    background: url('images/logo.png') no-repeat;
+    width: 80px;
+    height: 80px;
+    float: right;
+    display: block;
+    margin-top: convertoEM(-45);
+  }
+}
+
 @media screen and (max-width: convertoEM(990)) {
   .container {
     max-width: 90%;
@@ -157,11 +337,18 @@ header {
       }
     }
   }
+
+  header {
+    .navigation {
+      ul {
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: convertoEM(700)) {
   header {
-
     h1 {
       font-size: 8vw;
       text-align: center;
@@ -177,6 +364,7 @@ header {
     ul {
       width: 100%;
       margin-left: convertoEM(-10);
+      margin-bottom: 0;
 
       li {
         width: 100%;
@@ -232,7 +420,7 @@ header {
 
         li { 
           padding: convertoEM(20);
-          margin-left: convertoEM(-15);
+          padding-left: convertoEM(10);
 
           a {
             color: $pink;
@@ -250,6 +438,25 @@ header {
           background: #111;
         }
       }
+    }
+  }
+
+  .content-sass {
+    span {
+      margin-left: convertoEM(-10);
+    }
+  }
+
+  footer {
+    float: left;
+    display: block;
+    clear: both;
+    height: auto;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      display: table;
     }
   }
 }

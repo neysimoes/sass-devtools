@@ -49,16 +49,28 @@ $dark-midnight:                   rgb(44, 62, 80);
           transform: rotate($rotate-value);
 }
 
-@mixin box-shadow($first-value, $second-value, $third-value, $fourth-value) {
-  -webkit-box-shadow: $first-value $second-value $third-value $fourth-value;
-     -moz-box-shadow: $first-value $second-value $third-value $fourth-value;
-          box-shadow: $first-value $second-value $third-value $fourth-value;
+@mixin box-shadow($first-value, $second-value, $third-value, $fourth-value, $fifth-value) {
+  -webkit-box-shadow: $first-value $second-value $third-value $fourth-value $fifth-value;
+     -moz-box-shadow: $first-value $second-value $third-value $fourth-value $fifth-value;
+          box-shadow: $first-value $second-value $third-value $fourth-value $fifth-value;
 }
 
-@mixin box-shadowRGBA($first-value, $second-value, $third-value, $fourth-value) {
-  -webkit-box-shadow: $first-value $second-value $third-value rgba($fourth-value);
-     -moz-box-shadow: $first-value $second-value $third-value rgba($fourth-value);
-          box-shadow: $first-value $second-value $third-value rgba($fourth-value);  
+@mixin box-shadowRGBA($first-value, $second-value, $third-value, $fourth-value, $fifth-value) {
+  -webkit-box-shadow: $first-value $second-value $third-value $fourth-value rgba($fifth-value);
+     -moz-box-shadow: $first-value $second-value $third-value $fourth-value rgba($fifth-value);
+          box-shadow: $first-value $second-value $third-value $fourth-value rgba($fifth-value);  
+}
+
+@mixin box-shadowinner($first-value, $second-value, $third-value, $fourth-value, $fifth-value) {
+  -webkit-box-shadow: inset $first-value $second-value $third-value $fourth-value $fifth-value;
+     -moz-box-shadow: inset $first-value $second-value $third-value $fourth-value $fifth-value;
+          box-shadow: inset $first-value $second-value $third-value $fourth-value $fifth-value;
+}
+
+@mixin box-shadowinnerRGBA($first-value, $second-value, $third-value, $fourth-value, $fifth-value) {
+  -webkit-box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);
+     -moz-box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);
+          box-shadow: inset $first-value $second-value $third-value $fourth-value rgba($fifth-value);  
 }
 
 @mixin opacity($first-value, $second-value) {

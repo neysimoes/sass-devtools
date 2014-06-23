@@ -11,6 +11,16 @@ body {
   height: 1200px;
 }
 
+::selection {
+  background: #cc6699;
+  color: white;
+}
+
+::-moz-selection {
+  background: #cc6699;
+  color: white;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -67,6 +77,78 @@ header .navigation {
   background: #333;
   width: 100%;
   height: 5em;
+  margin: 0;
+  display: none;
+  -webkit-animation: nav 300ms;
+  -moz-animation: nav 300ms;
+  animation: nav 300ms;
+}
+header .navigation .content-navigation {
+  max-width: 95%;
+  margin: 0 auto;
+}
+header .navigation button {
+  display: none;
+}
+header .navigation .logo {
+  background: url("../images/logo.png") no-repeat;
+  width: 5em;
+  height: 5em;
+  margin-top: 0.625em;
+}
+header .navigation ul {
+  float: right;
+  display: block;
+  clear: both;
+  margin-top: -4.125em;
+}
+header .navigation ul li {
+  display: inline-block;
+  background: transparent;
+}
+header .navigation ul li a {
+  color: white;
+  text-align: center;
+  padding-left: 0;
+}
+header .navigation ul li a:hover {
+  background: transparent;
+  text-align: center;
+  color: #b54a7d;
+}
+header .navigation li {
+  list-style: none;
+  display: inline-block;
+  background: white;
+  padding: 0.625em;
+  filter: alpha(opacity=90);
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+  -webkit-border-radius: 0.125em;
+  -moz-border-radius: 0.125em;
+  border-radius: 0.125em;
+}
+header .navigation li a {
+  color: #cc6699;
+  text-decoration: none;
+  padding-left: 0.625em;
+}
+header .navigation li i {
+  font-size: 1.125em;
+  color: #cc6699;
+  padding-top: 0.0625em;
+}
+header .navigation li:hover {
+  background: #b54a7d;
+}
+header .navigation {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: #333;
+  width: 100%;
+  height: 5em;
   display: none;
   -webkit-animation: nav 300ms;
   -moz-animation: nav 300ms;
@@ -98,8 +180,11 @@ header .navigation ul li {
 header .navigation ul li a {
   color: white;
 }
-header .navigation ul li a:hover {
-  background: transparent;
+header .navigation ul li:hover {
+  background: #cc6699;
+}
+header .navigation ul li:hover a {
+  color: white;
 }
 
 @-webkit-keyframes nav {
@@ -120,10 +205,93 @@ header .navigation ul li a:hover {
     margin-top: 0;
   }
 }
+@-webkit-keyframes nav {
+  0% {
+    margin-top: -6.25em;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes nav {
+  0% {
+    margin-top: -6.25em;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+.content-sass {
+  margin-top: 8.125em;
+}
+.content-sass h1 {
+  color: #cc6699;
+  text-decoration: none;
+  margin-top: 1.875em;
+}
+.content-sass h2 {
+  color: #cc6699;
+  text-decoration: none;
+}
+.content-sass span {
+  background: #eee;
+  border: 0.0625em solid #cccccc;
+  padding: 0.625em;
+  margin-top: 0.625em;
+  display: inline-block;
+  width: 100%;
+  -webkit-border-radius: 0.3125em;
+  -moz-border-radius: 0.3125em;
+  border-radius: 0.3125em;
+}
+.content-sass .auto {
+  background: #eee;
+  border: 0.0625em solid #cccccc;
+  padding: 0.3125em;
+  display: inline-block;
+  width: auto;
+  -webkit-border-radius: 0.3125em;
+  -moz-border-radius: 0.3125em;
+  border-radius: 0.3125em;
+}
+.content-sass p {
+  margin-top: 0.3125em;
+  display: inline-block;
+}
+.content-sass ul li {
+  list-style: none;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background: #eee;
+  margin-top: 2.5em;
+  display: inline-block;
+}
+footer p {
+  color: #999;
+  margin-top: 2.8125em;
+}
+footer .logo {
+  background: url("images/logo.png") no-repeat;
+  width: 80px;
+  height: 80px;
+  float: right;
+  display: block;
+  margin-top: -2.8125em;
+}
+
 @media screen and (max-width: 61.875em) {
   .container {
     max-width: 90%;
     margin: 0 auto;
+  }
+
+  header .navigation ul {
+    display: block;
   }
 
   header .navigation ul {
@@ -144,6 +312,7 @@ header .navigation ul li a:hover {
   header ul {
     width: 100%;
     margin-left: -0.625em;
+    margin-bottom: 0;
   }
   header ul li {
     width: 100%;
@@ -191,7 +360,7 @@ header .navigation ul li a:hover {
   }
   header .navigation ul li {
     padding: 1.25em;
-    margin-left: -0.9375em;
+    padding-left: 0.625em;
   }
   header .navigation ul li a {
     color: #cc6699;
@@ -204,5 +373,21 @@ header .navigation ul li a:hover {
   }
   header .navigation ul li:hover {
     background: #111;
+  }
+
+  .content-sass span {
+    margin-left: -0.625em;
+  }
+
+  footer {
+    float: left;
+    display: block;
+    clear: both;
+    height: auto;
+    text-align: center;
+  }
+  footer img {
+    margin: 0 auto;
+    display: table;
   }
 }
