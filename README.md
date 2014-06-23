@@ -19,4 +19,4 @@ For more information about Sass Devtools, check out the github page of the proje
 
 ### About the Author
 Hey, my name is João Paulo, I'm 15 years old, I'm from Brazil and I'm a Front-End Developer.
-For more information access my github account. Clicking <a href="https://github.com/jaoz">here</a>.
+If you wannna see more projects access my github account. Clicking <a href="https://github.com/jaoz">here</a>.
