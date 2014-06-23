@@ -8,7 +8,7 @@
 }
 
 body {
-  height: 1500px;
+  height: 1200px;
 }
 
 .container {
@@ -21,7 +21,7 @@ header {
   width: 100%;
   height: auto;
   color: white;
-  padding: 1.25em 0 3.125em 0;
+  padding: 1.25em 0em 3.125em 0em;
 }
 header h1 {
   margin-top: 0.625em;
@@ -32,7 +32,7 @@ header h2 {
   font-size: 0.625em;
 }
 header ul {
-  margin-top: 2.5em;
+  margin: 2.5em 0;
 }
 header ul li {
   list-style: none;
@@ -60,17 +60,77 @@ header ul li i {
 header ul li:hover {
   background: #b54a7d;
 }
+header .navigation {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: #333;
+  width: 100%;
+  height: 5em;
+  display: none;
+  -webkit-animation: nav 300ms;
+  -moz-animation: nav 300ms;
+  animation: nav 300ms;
+}
+header .navigation .content-navigation {
+  max-width: 95%;
+  margin: 0 auto;
+}
+header .navigation button {
+  display: none;
+}
+header .navigation .logo {
+  background: url("../images/logo.png") no-repeat;
+  width: 5em;
+  height: 5em;
+  margin-top: 0.625em;
+}
+header .navigation ul {
+  float: right;
+  display: block;
+  clear: both;
+  margin-top: -4.125em;
+}
+header .navigation ul li {
+  display: inline-block;
+  background: transparent;
+}
+header .navigation ul li a {
+  color: white;
+}
+header .navigation ul li a:hover {
+  background: transparent;
+}
 
-@media screen and (max-width: 990px) {
+@-webkit-keyframes nav {
+  0% {
+    margin-top: -6.25em;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes nav {
+  0% {
+    margin-top: -6.25em;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 61.875em) {
   .container {
     max-width: 90%;
     margin: 0 auto;
   }
-}
-@media screen and (max-width: 700px) {
-  header {
-    padding: 1.25em 0 1.25em 0;
+
+  header .navigation ul {
+    display: block;
   }
+}
+@media screen and (max-width: 43.75em) {
   header h1 {
     font-size: 8vw;
     text-align: center;
@@ -96,5 +156,53 @@ header ul li:hover {
   header ul li a i {
     width: 100%;
     text-align: center;
+  }
+  header .navigation {
+    width: 100%;
+  }
+  header .navigation .logo {
+    margin: 0 auto;
+    margin-top: 0.625em;
+  }
+  header .navigation .content-navigation {
+    width: 95%;
+    margin: 0 auto;
+  }
+  header .navigation button {
+    display: block;
+    float: right;
+    display: block;
+    margin: -4.375em 0.625em 0 0;
+    background: transparent;
+    border: none;
+  }
+  header .navigation button i {
+    font-size: 1.875em;
+    color: white;
+  }
+  header .navigation ul {
+    position: absolute;
+    top: 5em;
+    left: 0;
+    background: #222;
+    margin: 0;
+    width: 100%;
+    display: none;
+  }
+  header .navigation ul li {
+    padding: 1.25em;
+    margin-left: -0.9375em;
+  }
+  header .navigation ul li a {
+    color: #cc6699;
+  }
+  header .navigation ul li a:after {
+    font-family: "FontAwesome";
+    content: "\f061";
+    float: right;
+    margin-right: 1.25em;
+  }
+  header .navigation ul li:hover {
+    background: #111;
   }
 }
