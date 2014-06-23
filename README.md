@@ -1,4 +1,4 @@
-Sass Devtools v.1.0
+Sass Devtools v1.0
 ===================
 Sass Devtools is an Open Source tool with features that will help your productivity with the SASS.
 
