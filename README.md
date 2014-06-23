@@ -14,6 +14,8 @@ Then you import the sass-devtools.scss to your style.scss file. Like this:
 ``` css
 @import "sass-devtools.scss";
 ```
+Then your're Done :)
+
 ### Documentation
 For more information about Sass Devtools, check out the github page of the project. https://jaoz.github.io/sass-devtools
 
