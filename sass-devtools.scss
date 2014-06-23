@@ -1,11 +1,16 @@
 //
 // Sass Devtools v.1.0
+<<<<<<< HEAD
 // Author: João Paulo - jaoz
+=======
+// Author: João Paulo
+>>>>>>> 36a0528d7474e58eec9c5895e70fbf175be73693
 // Repository: https://github.com/jaoz/sass-devtools
 // Documentation: https://jaoz.github.io/sass-devtools
 // -------------------------------------------------------------------------------------------------------------------------
 
 //
+<<<<<<< HEAD
 // Variables
 // -------------------------------------------------------------------------------------------------------------------------
 $grey:                            rgb(149, 165, 166);
@@ -87,3 +92,7 @@ $dark-midnight:                   rgb(44, 62, 80);
 @function convertoPER($target, $parent: 100) {
   @return percentage($target / $parent);
 }
+=======
+// Mixins
+// -------------------------------------------------------------------------------------------------------------------------
+>>>>>>> 36a0528d7474e58eec9c5895e70fbf175be73693
