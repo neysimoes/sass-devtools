@@ -8,8 +8,6 @@ Sass Devtools is an Open Source tool with features that will help your productiv
 - Great Code
 - Great Syntax
 - Easy to understand
-- Sass Devtools is available in many Package Managers like (Bower, Node)
-
 
 ### How to install?
 
@@ -22,3 +20,8 @@ Then you import the sass-devtools.scss to your style.scss file. Like this:
 ### Documentation
 
 For more information about Sass Devtools, check out the github page of the project. https://jaoz.github.io/sass-devtools
+
+### About the Author
+
+Hey, my name is João Paulo, I'm 15 years old, I'm from Brazil and I'm a Front-End Developer.
+For more information access my github account. Clicking <a href="https://github.com/jaoz">here</a>.
