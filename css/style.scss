@@ -1,0 +1,116 @@
+@import "../sass-devtools.scss";
+//
+// Sass Devtools v.1.0
+// Author: João Paulo (https://github.com/jaoz)
+// Repository: https://github.com/jaoz/sass-devtools
+//
+
+//
+// Variables
+//
+$pink: #CC6699;
+$dark-pink: #b54a7d;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  @include transition(all, 100ms, ease);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: $pink;
+  width: 100%;
+  height: auto;
+  color: $white;
+  padding: convertoEM(20) convertoEM(0) convertoEM(50) convertoEM(0);
+
+  h1 {
+  	margin-top: convertoEM(10);
+  	display: inline-block;
+  	font-size: convertoEM(60);
+  }
+
+  h2 {
+  	font-size: convertoEM(10);
+  }
+
+  ul {
+  	margin-top: convertoEM(40);
+  	
+  	li {
+  	  list-style: none;
+  	  display: inline-block;
+  	  background: $white;
+  	  padding: convertoEM(10);
+  	  @include opacity(.9, 90);
+  	  @include border-radius(convertoEM(2));
+
+  	  a {
+  	  	color: $pink;
+  	  	text-decoration: none;
+  	  	padding-left: convertoEM(10);
+  	  }
+
+  	  i {
+  	    font-size: convertoEM(18);
+  	    color: $pink;
+  	    padding-top: convertoEM(1);
+  	  }
+  	}
+
+  	li:hover {
+  	  background: $dark-pink;
+  	}
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+  	max-width: 90%;
+  	margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+
+  	h1 {
+  	  font-size: 8vw;
+  	  text-align: center;
+  	  width: 100%;
+  	}
+
+  	h3 {
+  	  text-align: center;
+  	  width: 100%;
+  	  margin-top: convertoEM(20);
+  	}
+
+  	ul {
+  	  width: 100%;
+  	  margin-left: convertoEM(-10);
+
+  	  li {
+  	  	width: 100%;
+  	  	margin-bottom: convertoEM(2);
+
+  	  	a {
+  	  	  width: 100%;
+  	  	  text-align: center;
+
+  	  	  i {
+  	  	  width: 100%;
+  	  	  text-align: center;
+  	  	}
+  	  	}
+  	  }
+  	}
+  }
+}
