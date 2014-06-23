@@ -19,6 +19,10 @@ $white: #fff;
   @include transition(all, 100ms, ease);
 }
 
+body {
+  height: 1200px;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -42,7 +46,7 @@ header {
   }
 
   ul {
-  	margin-top: convertoEM(40);
+  	margin: convertoEM(40) 0;
   	
   	li {
   	  list-style: none;
@@ -69,16 +73,93 @@ header {
   	  background: $dark-pink;
   	}
   }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background: #333;
+    width: 100%;
+    height: convertoEM(80);
+    display: none;
+    -webkit-animation: nav 300ms;
+       -moz-animation: nav 300ms;
+            animation: nav 300ms;
+
+    .content-navigation {
+      max-width: 95%;
+      margin: 0 auto;
+    }
+
+    button {
+      display: none;
+    }
+
+    .logo {
+      background: url("../images/logo.png") no-repeat;
+      width: convertoEM(80);
+      height: convertoEM(80);
+      margin-top: convertoEM(10);
+    }
+
+    ul {
+      float: right;
+      display: block;
+      clear: both;
+      margin-top: convertoEM(-66);
+
+      li {
+        display: inline-block;
+        background: transparent;
+
+        a {
+          color: $white;
+        }
+
+        a:hover {
+          background: transparent;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 990px) {
+@-webkit-keyframes nav {
+    0% {
+      margin-top: convertoEM(-100);
+    }
+
+    100% {
+      margin-top: 0;
+    }
+  }
+
+@keyframes nav {
+  0% {
+    margin-top: convertoEM(-100);
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: convertoEM(990)) {
   .container {
   	max-width: 90%;
   	margin: 0 auto;
   }
+
+  header {
+    .navigation {
+      ul {
+        display: block;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: convertoEM(700)) {
   header {
 
   	h1 {
@@ -112,5 +193,63 @@ header {
   	  	}
   	  }
   	}
+
+    .navigation {
+      width: 100%;
+    
+      .logo {
+        margin: 0 auto;
+        margin-top: convertoEM(10);
+      }
+
+      .content-navigation {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      button {
+        display: block;
+        float: right;
+        display: block;
+        margin: convertoEM(-70) convertoEM(10) 0 0;
+        background: transparent;
+        border: none;
+        
+        i {
+          font-size: convertoEM(30);
+          color: $white;
+        }
+      }
+
+      ul {
+        position: absolute;
+        top: convertoEM(80);
+        left: 0;
+        background: #222;
+        margin: 0;
+        width: 100%;
+        display: none;
+
+        li { 
+          padding: convertoEM(20);
+          margin-left: convertoEM(-15);
+
+          a {
+            color: $pink;
+          }
+
+          a:after {
+            font-family: "FontAwesome";
+            content: "\f061";
+            float: right;
+            margin-right: convertoEM(20);
+          }
+        }
+
+        li:hover {
+          background: #111;
+        }
+      }
+    }
   }
 }
