@@ -12,3 +12,9 @@ Sass Devtools is an Open Source tool with features that will help your productiv
 
 
 ### How to install?
+
+First you have to download Sass Devtools, clicking <a href="https://jaoz.github.io/sass-devtools">here</a>
+
+''' css
+@import "sass-devtools.scss";
+'''
