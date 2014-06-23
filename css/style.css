@@ -17,7 +17,7 @@ header {
   width: 100%;
   height: auto;
   color: white;
-  padding: 1.25em 0em 3.125em 0em;
+  padding: 1.25em 0 3.125em 0;
 }
 header h1 {
   margin-top: 0.625em;
@@ -64,6 +64,9 @@ header ul li:hover {
   }
 }
 @media screen and (max-width: 700px) {
+  header {
+    padding: 1.25em 0 1.25em 0;
+  }
   header h1 {
     font-size: 8vw;
     text-align: center;

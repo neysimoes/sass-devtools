@@ -29,7 +29,7 @@ header {
   width: 100%;
   height: auto;
   color: $white;
-  padding: convertoEM(20) convertoEM(0) convertoEM(50) convertoEM(0);
+  padding: convertoEM(20) 0 convertoEM(50) 0;
 
   h1 {
   	margin-top: convertoEM(10);
@@ -80,6 +80,7 @@ header {
 
 @media screen and (max-width: 700px) {
   header {
+    padding: convertoEM(20) 0 convertoEM(20) 0;
 
   	h1 {
   	  font-size: 8vw;
