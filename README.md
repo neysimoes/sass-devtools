@@ -8,7 +8,7 @@ Sass Devtools is an Open Source tool with features that will help your productiv
 - Easy to understand
 
 # How to Install?
-Well first you have to download the file .scss. You can download it by clicking <a href="https://jaoz.github.io/sass-devtools">here</a>.
+Well first you have to download the file .scss. You can download it by clicking <a href="https://jaoz.github.io/sass-devtools" target="_blank">here</a>.
 
 Then you import the .scss file that you downloaded, in your style.scss.
 ``` css
@@ -200,4 +200,4 @@ $dark-midnight;
 ```
 ### About the Author
 Hey, my name is João Paulo, I'm 15 years old, I'm from Brazil and I'm a Front-End Developer.
-If you wanna see more projects access my github account. Clicking <a href="https://github.com/jaoz">here</a>.
+If you wanna see more projects access my github account. Clicking <a href="https://github.com/jaoz" target="_blank">here</a>.
