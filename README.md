@@ -7,8 +7,6 @@ Sass Devtools is an Open Source tool with features that will help your productiv
 - Great Syntax
 - Easy to understand
 
-[![Sass Devtools v1.0](https://www.dropbox.com/s/hkqxtxabi0z4qk0/sass-devtools.png "Sass Devtools v1.0")](http://jaoz.github.io/sass-devtools/)
-
 ### How to install?
 First you have to download Sass Devtools, clicking <a href="https://jaoz.github.io/sass-devtools">here</a>.
 Then you import the sass-devtools.scss to your style.scss file. Like this:
